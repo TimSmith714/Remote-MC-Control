@@ -15,21 +15,28 @@ Run the client program on the other computer and use the following commands
 
 Keyboard commands
 
-w - move foward
-s - move backward
-a - side step left
-d - side step right
-
-u - move view up
-j - move view down
-h - turn view left
-k - turn view right
-
-t - toggle flying mode (double-tap space bar)
-g - move up or jump (space bar)
-b - move down or crouch for a moment (left shift)
+| Key | Command |
+|----|--------|
+|w  | move foward |
+|s | move backward|
+|a | side step left|
+|d | side step right|
+| | |
+|u | move view up |
+|j | move view down|
+|h | turn view left|
+|k | turn view right|
+| | |
+|t | toggle flying mode (double-tap space bar)|
+|g | move up or jump (space bar)|
+|b | move down or crouch for a moment (left shift)|
 
 I've not added the command to enter the inventory yet. The mouse reverts to a 'normal' windows mode when you do so I've got to get my head round how the controls work at that point.
 
 TODO
 Crouch - might be a good idea to toggle this key as it stops you falling off ledges - especially important given that this is designed to work with assistive technolog-es
+
+Important Credits
+I learnt how to create the two programs and have them talk to each other with this very useful tutorial at http://ilab.cs.byu.edu/python/socket/echoserver.html from  Brigham Young University
+It wouldn't have happened so quickly without the PyUserInput project https://github.com/SavinaRoja/PyUserInput
+I'm merely standing on the shoulders of giants
