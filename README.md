@@ -39,4 +39,5 @@ Crouch - might be a good idea to toggle this key as it stops you falling off led
 Important Credits
 I learnt how to create the two programs and have them talk to each other with this very useful tutorial at http://ilab.cs.byu.edu/python/socket/echoserver.html from  Brigham Young University
 It wouldn't have happened so quickly without the PyUserInput project https://github.com/SavinaRoja/PyUserInput
+I used Pycharm http://www.jetbrains.com/pycharm/ as my IDE for this project. 
 I'm merely standing on the shoulders of giants
