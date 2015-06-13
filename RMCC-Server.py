@@ -1,5 +1,6 @@
-from pymouse import PyMouse
-from pykeyboard import PyKeyboard
+from PyUserInput.pymouse import PyMouse
+from PyUserInput.pykeyboard import PyKeyboard
+
 import time
 import socket
 
