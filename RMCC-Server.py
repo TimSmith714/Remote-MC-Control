@@ -1,8 +1,10 @@
 from PyUserInput.pymouse import PyMouse
 from PyUserInput.pykeyboard import PyKeyboard
+from tkinter import *
 
 import time
 import socket
+import tkinter as tk
 
 host = ''
 port = 50000
@@ -12,10 +14,43 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((host, port))
 s.listen(backlog)
 
+ipaddressTest = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+ipaddressTest.connect(('8.8.8.8',0))
+local_ip_address = ipaddressTest.getsockname()[0]
+
 m = PyMouse()
 k = PyKeyboard()
 
 x_dim, y_dim = m.screen_size()
+
+#Done with other initialisation so lets build a window
+
+RmccWin = tk.Tk()
+RmccWin.title("Minecraft Remote Control Server")
+RmccWin.geometry("330x300")
+RmccWin.wm_iconbitmap('Browsersettings.ico')
+
+btnStart = tk.Button(RmccWin, text="Start", font=("Tahoma", 16))
+btnStart.pack()
+btnStart.place(x=0, y=256)
+
+btnStop = tk.Button(RmccWin, text="Stop", font=("Tahoma", 16))
+btnStop.pack()
+btnStop.place(x=270, y=256)
+
+lblIPaddressTitle = tk.Label(RmccWin,text="IP Address:",font=("Tahoma", 14))
+lblIPaddressTitle.pack()
+lblIPaddress = tk.Label(RmccWin, text=local_ip_address,font=("Tahoma", 14))
+lblIPaddress.pack()
+
+lblServerStatus = tk.Label(RmccWin, text="Server not running", font=("Tahoma", 12))
+lblServerStatus.place(x=150, y=250)
+lblServerStatus.pack()
+
+lblInstructions = tk.Label(RmccWin, text="Start this program first. \nMake a note of the IP address shown above. Enter this address into the Client program so it can communicate with this program and Minecraft. \nClick Start and this program will start. \nStart Minecraft and put it in Fullscreen mode (F11)", wraplength=300, anchor=W, justify=LEFT)
+lblInstructions.pack()
+
+RmccWin.mainloop()
 
 while 1:
     client, address = s.accept()

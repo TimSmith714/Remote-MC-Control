@@ -3,6 +3,12 @@ Remote-MC-Control
 
 Uses Python to control the mouse and keyboard remote for Minecraft but should be very easy to rework for other games
 
+Requirements
+
+pywin32 from Sourceforge and this must match the version of Python on your computer
+For reference, I've used 32bit Python 3.4 (even though I'm using 64bit Windows)
+
+
 You will need to download the PyUserInput files from  https://github.com/SavinaRoja/PyUserInput into the folder with the server code in and run whatever dependancies there are for your OS. I've developed this on Windows and it involved pywin32 and pyHook. I'm /hoping/ that this will run on other OSes so long as the appropriate dependancies are satisfied
 
 At the moment the IP address of the server (machine running the game) is fixed to 192.168.2.5 It's easy to change but I may add a question when you start. Would welcome thoughts on that as compared to the hassle of entering an IP address every time you want to play, the hassle of editing the Python file seems pretty small
@@ -41,3 +47,7 @@ I learnt how to create the two programs and have them talk to each other with th
 It wouldn't have happened so quickly without the PyUserInput project https://github.com/SavinaRoja/PyUserInput
 I used Pycharm http://www.jetbrains.com/pycharm/ as my IDE for this project. 
 I'm merely standing on the shoulders of giants
+
+Icons from
+http://www.smashingmagazine.com/2015/03/freebie-swifticons-icon-set/
+
