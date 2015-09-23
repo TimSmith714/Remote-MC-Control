@@ -1,20 +1,23 @@
+#Removed the lines to receive data from the server
+#As that didn't seem to be working
+
 import socket
 import time
 
-host = '192.168.2.5'
+host = '127.0.0.1'
 port = 50000
 size = 1024
 
 def sendCommand(commandString):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((host, port))
-    s.send(commandString)
-    data = s.recv(size)
+    s.send(commandString.encode())
+#    data = s.recv(size)
     s.close()
-    print 'Received: ', data
+#    print ('Received: ', data)
 
 while True:
-    mcControl = raw_input("Command?")
+    mcControl = input("Command?")
     if mcControl == 'h':
         sendCommand('viewLeft')
     elif mcControl == 'k':
